@@ -1,0 +1,40 @@
+{% block login %}
+    <form method="POST" style="max-width: 500px; margin: 0 auto; padding: 20px; background-color: #f9fafb; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        {% with messages = get_flashed_messages(with_categories=True) %}
+        {% if messages %}
+            <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+                {% for category, message in messages %}
+                    <div style="
+                        padding: 10px 20px;
+                        margin-bottom: 10px;
+                        border-radius: 5px;
+                        color: white;
+                        background-color: {% if category == 'success' %} green {% elif category == 'error' %} red {% else %} gray {% endif %};
+                        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                        font-family: Arial, sans-serif;
+                        font-size: 14px;
+                        text-align: center;
+                    ">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+        <h2 style="text-align: center; font-size: 24px; margin-bottom: 20px; color: #333;">Warehouse Login</h2>
+
+        <div style="margin-bottom: 15px;">
+            <label for="warehouse_name" style="font-size: 16px; font-weight: 600; color: #333;">Warehouse Name:</label>
+            <input type="text" name="warehouse_name" required style="width: 100%; padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 5px; background-color: #fff; color: #333;">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label for="warehouse_password" style="font-size: 16px; font-weight: 600; color: #333;">Warehouse Password:</label>
+            <input type="password" name="warehouse_password" required style="width: 100%; padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 5px; background-color: #fff; color: #333;">
+        </div>
+
+        <div style="text-align: center;">
+            <input type="submit" value="Login" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
+        </div>
+    </form>
+{% endblock %}

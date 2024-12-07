@@ -1,0 +1,44 @@
+{% extends "index.html" %}
+
+{% block product %}
+    <div style="max-width: 500px; margin: 0 auto; padding: 20px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); background-color: #f9f9f9;">
+        <h1 style="text-align: center; color: #333;">Add Product</h1>
+        
+        <form method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+            
+            <div>
+                <label for="product_id" style="font-weight: bold; color: #333;">Your Product ID:</label>
+                <input type="text" value="{{product_id}}" readonly style="width: 100%; padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
+
+            <div>
+                <label for="product_user_id" style="font-weight: bold; color: #333;">Product User ID:</label>
+                <input type="text" value="{{product_user_id}}" readonly style="width: 100%; padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
+
+            <div>
+                <label for="Product_name" style="font-weight: bold; color: #333;">Product Name:</label>
+                <input type="text" name="Product_name" required style="width: 100%; padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
+
+            <div>
+                <label for="Product_amount" style="font-weight: bold; color: #333;">Product Amount:</label>
+                <input type="number" min="1" name="Product_amount" required style="width: 100%; padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
+
+            <div>
+                <label for="Product_quantity" style="font-weight: bold; color: #333;">Product Quantity:</label>
+                <input type="number" min="1" name="Product_quantity" required style="width: 100%; padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
+
+            <div>
+                <label for="Product_total_quantity" style="font-weight: bold; color: #333;">Product Total Amount:</label>
+                <input type="text" value="value not Found!" readonly style="width: 100%; padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 5px; background-color: #eaeaea;">
+            </div>
+
+            <div style="text-align: center;">
+                <input type="submit" value="Add Product" style="background-color: #4CAF50; color: white; padding: 12px 24px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+            </div>
+        </form>
+    </div>
+{% endblock %}

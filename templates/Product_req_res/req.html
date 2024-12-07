@@ -1,0 +1,58 @@
+{% block req %}
+  <section>
+
+    <form method="post">
+
+        {% comment %} movement id {% endcomment %}
+        <div class="movment_id">
+            <input type="text" value="" readonly>
+        </div>
+
+        {% comment %} warehouse details {% endcomment %}
+        <div class="warehouse_from_name">
+            <select name="warehouse_from_name" id="warehouse_from_name">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="warehouse_to_name">
+            <input type="text" value="" readonly>
+        </div>
+
+        {% comment %} product details {% endcomment %}
+        <div class="product_name">
+            <select name="product_name" id="product_name">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="product_amount">
+            <input type="text" value="" name="" readonly>
+        </div>
+        <div class="product_total_qty">
+            <input type="text" value="" name="" readonly>
+        </div>
+
+        <div class="want_product_quantity">
+            <input type="number" min="1" name="" placeholder="Product Quantity..," required>
+        </div>
+
+        {% comment %} location details {% endcomment %}
+        <div class="warehouse_from_location">
+            <input type="text" value="" name="" readonly>
+        </div>
+        <div class="warehouse_to_location">
+            <input type="text" value="" name="" readonly>
+        </div>
+
+        {% comment %} status configure {% endcomment %}
+        <div class="status_configure">
+            <input type="text" value="" readonly>
+        </div>
+
+        <div class="submit_data">
+            <input type="text" value="request" readonly>
+        </div>
+        
+    </form>
+
+  </section>
+{% endblock %}

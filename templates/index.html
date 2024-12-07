@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arele</title>
+    <style>
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        padding: 10px 15px;
+        transition: background-color 0.3s, color 0.3s;
+        border-radius: 12px;
+      }
+      nav a:hover {
+        background-color: white;
+        color: black;
+      }
+    </style>
+  </head>
+  <body style="margin: 0; font-family: Arial, sans-serif; background-color: #f4f4f4;">
+
+    <nav style="
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        padding: 15px 20px;
+    ">
+      <div>
+        <a href="{{ url_for('profile') }}" style="font-size: 20px; font-weight: bold;">
+          Profile
+        </a>
+      </div>
+      <div style="display: flex; gap: 15px;">
+        <a href="{{ url_for('main') }}">Home</a>
+        <a href="{{ url_for('addProduct') }}">Add Product</a>
+        <a href="{{ url_for('profile') }}">Product Track</a>
+        <a href="{{ url_for('profile') }}">Request Product</a>
+        <a href="{{ url_for('profile') }}">Response Product</a>
+        <a href="{{ url_for('profile') }}">Warehouse Details</a>
+      </div>
+    </nav>
+
+    {% block profile %}{% endblock  %}
+    {% block product %}{% endblock  %}
+
+  </body>
+</html>

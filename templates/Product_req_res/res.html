@@ -1,0 +1,26 @@
+{% block res %}
+    <form method="POST">
+        <section>
+            <div>
+                <label for="req_warehouse_name"></label>
+                <input type="text" value="" readonly>
+            </div>
+            <div>
+                <label for="req_warehouse_location"></label>
+                <input type="text" value="" readonly>
+            </div>
+            <div>
+                <label for="req_warehouse_product_name"></label>
+                <input type="text" value="" readonly>
+            </div>
+            <div>
+                <label for="req_warehouse_product_qty"></label>
+                <input type="text" value="" readonly>
+            </div>
+            <div class="check_status">
+                <input type="submit" value="Accept" readonly>
+                <input type="submit" value="Decline" readonly>
+            </div>
+        </section>
+    </form>
+{% endblock  %}
